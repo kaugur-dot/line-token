@@ -1,0 +1,118 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono: 'Space Mono', 'Chivo Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+    /* Base Palette: Warm Light Creamy Neutrals */
+    --color-canvas: #F8F6F0;
+    --color-surface: #F2EFE8;
+    --color-surface-elevated: #EBE7DF;
+    --color-surface-active: #E4DFC;
+    --color-border-hairline: #DDD6C8;
+    --color-border-subtle: #E8E2D6;
+    --color-border-focus: #1E1C19;
+    
+    /* Text Neutrals (High Contrast & WCAG AA Compliant) */
+    --color-text-primary: #1E1C19;
+    --color-text-secondary: #58524A;
+    --color-text-muted: #797267;
+
+    /* Ghost selected fill for navigation */
+    --fill-ghost-selected: #E7E2D7;
+
+    /* Semantic Status Tokens (Background, Text, Border) */
+    --status-waiting-bg: #EBE7DF;
+    --status-waiting-text: #3D3831;
+    --status-waiting-border: #CCC4B5;
+
+    --status-serving-bg: #1A3628;
+    --status-serving-text: #EAF6EE;
+    --status-serving-border: #142B20;
+
+    --status-held-bg: #FBF0DB;
+    --status-held-text: #7A4B0A;
+    --status-held-border: #E8CF9E;
+
+    --status-skipped-bg: #FBEDE9;
+    --status-skipped-text: #8F271E;
+    --status-skipped-border: #E9BDB6;
+
+    --status-completed-bg: #EAF4ED;
+    --status-completed-text: #1B502A;
+    --status-completed-border: #BCD9C2;
+
+    --status-priority-bg: #FDE8E8;
+    --status-priority-text: #9B1C1C;
+    --status-priority-border: #F8B4B4;
+
+    /* Display Board Warm Dark Palette */
+    --display-canvas: #151412;
+    --display-surface: #201E1B;
+    --display-surface-elevated: #2B2824;
+    --display-border: #36322C;
+    --display-amber: #F59E0B;
+    --display-amber-soft: #D97706;
+    --display-cream: #F8F4EB;
+    --display-muted: #9E9689;
+  }
+
+  body {
+    background-color: var(--color-canvas);
+    color: var(--color-text-primary);
+    font-family: var(--font-sans);
+    letter-spacing: -0.01em;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Tabular and LED Monospace Styling */
+.font-wayfinder {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums lining-nums;
+  letter-spacing: -0.03em;
+}
+
+/* Subtle Hairline Dividers */
+.hairline-b {
+  border-bottom: 1px solid var(--color-border-hairline);
+}
+
+.hairline-t {
+  border-top: 1px solid var(--color-border-hairline);
+}
+
+.hairline-r {
+  border-right: 1px solid var(--color-border-hairline);
+}
+
+.hairline-l {
+  border-left: 1px solid var(--color-border-hairline);
+}
+
+.hairline-border {
+  border: 1px solid var(--color-border-hairline);
+}
+
+/* Accessibility Focus States */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 2px solid #1E1C19;
+  outline-offset: 2px;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

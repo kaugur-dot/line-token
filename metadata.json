@@ -1,0 +1,6 @@
+{
+  "name": "SmartQueue",
+  "description": "Wayfinder LED transit-grade queue and information display system with real-time patient routing, operations console, and public arrival boards.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
